@@ -1,0 +1,56 @@
+services:
+  # db:
+  #   image: postgres:13
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   environment:
+  #     POSTGRES_DB: card_payment_db
+  #     POSTGRES_USER: ${DB_USER:-user}
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
+
+  # backend:
+  #   build: ./backend
+  #   ports:
+  #     - "8000:8000"
+  #   volumes:
+  #     - ./backend:/app
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     - DB_USER=${DB_USER:-user}
+  #     - DB_PASSWORD=${DB_PASSWORD:-password}
+  #     - DB_HOST=db
+  #     - DB_PORT=5432
+  #     - DB_NAME=card_payment_db
+  #   restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    # depends_on:
+    #   - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    restart: unless-stopped
+
+  # Remove nginx for now to simplify debugging
+  # nginx:
+  #   image: nginx:alpine
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #     - "8443:8443"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf
+  #     - ./certs:/etc/nginx/ssl
+  #   depends_on:
+  #     - backend
+  #     - frontend
+  #   restart: unless-stopped
+
+volumes:
+  postgres_data:
