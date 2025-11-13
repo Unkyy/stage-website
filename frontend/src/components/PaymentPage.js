@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './PaymentPage.css';
 
 const PaymentPage = () => {
   const [cardNumber, setCardNumber] = useState('');
@@ -106,12 +105,12 @@ const PaymentPage = () => {
   };
 
   return (
-    <div className="payment-page">
-      <h1>Effectuer un paiement</h1>
-      <div className="payment-form-container">
-        <form onSubmit={handleSubmit} className="payment-form">
-          <div className="form-group">
-            <label htmlFor="cardNumber">Numéro de carte :</label>
+    <div className="max-w-2xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-gray-800 mb-8">Effectuer un paiement</h1>
+      <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+          <div className="text-left">
+            <label htmlFor="cardNumber" className="block mb-2 font-bold text-gray-700">Numéro de carte :</label>
             <input
               type="text"
               id="cardNumber"
@@ -120,12 +119,13 @@ const PaymentPage = () => {
               placeholder="1234 5678 9012 3456"
               maxLength="19"
               required
+              className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="expiryDate">Date d'expiration :</label>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex-1 text-left">
+              <label htmlFor="expiryDate" className="block mb-2 font-bold text-gray-700">Date d'expiration :</label>
               <input
                 type="text"
                 id="expiryDate"
@@ -134,11 +134,12 @@ const PaymentPage = () => {
                 placeholder="MM/AA"
                 maxLength="5"
                 required
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="cvv">CVV :</label>
+            <div className="flex-1 text-left">
+              <label htmlFor="cvv" className="block mb-2 font-bold text-gray-700">CVV :</label>
               <input
                 type="text"
                 id="cvv"
@@ -147,12 +148,13 @@ const PaymentPage = () => {
                 placeholder="123"
                 maxLength="3"
                 required
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="amount">Montant (€) :</label>
+          <div className="text-left">
+            <label htmlFor="amount" className="block mb-2 font-bold text-gray-700">Montant (€) :</label>
             <input
               type="number"
               id="amount"
@@ -162,16 +164,17 @@ const PaymentPage = () => {
               min="0"
               step="0.01"
               required
+              className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
 
           {message && (
-            <div className={`message ${success ? 'success' : 'error'}`}>
+            <div className={`p-4 rounded-md text-center ${success ? 'bg-green-100 text-green-700 border border-green-300' : 'bg-red-100 text-red-700 border border-red-300'}`}>
               {message}
             </div>
           )}
 
-          <button type="submit" disabled={loading} className="submit-button">
+          <button type="submit" disabled={loading} className={`py-3 px-6 rounded-md font-medium text-white transition-colors ${loading ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}>
             {loading ? 'Traitement...' : 'Payer'}
           </button>
         </form>

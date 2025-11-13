@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './components/HydrationStyles.css'; // Import hydration styles
 import App from './App';
 
 // Import hydration utilities
