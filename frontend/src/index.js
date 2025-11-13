@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import {hydrateRoot} from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { hydrate } from 'react-dom';
-
-// Import hydration utilities
-import { handleHydrationError } from './utils/hydration';
 
 const rootElement = document.getElementById('root');
 
@@ -14,17 +11,12 @@ if (!rootElement) {
   throw new Error('Root element not found');
 }
 
-const root = ReactDOM.createRoot(rootElement);
+const root  = hydrateRoot(
+  document.getElementById('root'),
+  <App />
+);
 
-// Add error boundary around the root render
-try {
-  root.render(
-    <React.StrictMode>
-      hydrate(<App />, document.getElementById('root'))
-    </React.StrictMode>
-  );
-} catch (error) {
-  console.error('Error during React hydration:', error);
-  handleHydrationError(error);
-  // Optionally, you could render an error fallback here
-}
+
+root.render(
+  <App />
+);
