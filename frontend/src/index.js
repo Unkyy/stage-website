@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { hydrate } from 'react-dom';
 
 // Import hydration utilities
 import { handleHydrationError } from './utils/hydration';
@@ -19,7 +20,7 @@ const root = ReactDOM.createRoot(rootElement);
 try {
   root.render(
     <React.StrictMode>
-      <App />
+      hydrate(<App />, document.getElementById('root'))
     </React.StrictMode>
   );
 } catch (error) {
