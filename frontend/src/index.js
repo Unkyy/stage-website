@@ -1,8 +1,7 @@
 import React from 'react';
-import {hydrateRoot} from 'react-dom/client';
+import {createRoot, hydrateRoot} from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { hydrate } from 'react-dom';
 
 const rootElement = document.getElementById('root');
 
@@ -11,12 +10,9 @@ if (!rootElement) {
   throw new Error('Root element not found');
 }
 
-const root  = hydrateRoot(
-  document.getElementById('root'),
-  <App />
-);
-
-
-root.render(
-  <App />
-);
+if(rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, <App />);
+} else {
+  const root = createRoot(rootElement);
+  root.render(<App />);
+}

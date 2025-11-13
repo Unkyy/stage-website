@@ -1,6 +1,4 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { hydrate } from 'react-dom';
 
 import CGUPage from './components/CGUPage';
 import HomePage from './components/HomePage';
@@ -8,11 +6,9 @@ import PaymentPage from './components/PaymentPage';
 // Removed CSS import since we're using Tailwind
 
 // Import hydration components
-import { HydrationProvider } from './components/HydrationProvider';
 
 function App() {
   return (
-    hydrate(
       <Router>
         <div className="min-h-screen flex flex-col">
           <nav className="bg-gray-50 p-4 border-b border-gray-200">
@@ -29,7 +25,6 @@ function App() {
           </main>
         </div>
       </Router>
-    )
   );
 }
 
