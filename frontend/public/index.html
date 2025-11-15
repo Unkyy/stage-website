@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#10B981" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Register for trail running events and manage your participation"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.webmanifest" />
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Trail Running App">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="application-name" content="Trail Running App">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-TileColor" content="#10B981">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="HandheldFriendly" content="True">
+    <title>Trail Running Event Registration</title>
     <link href="/dist/styles.css" rel="stylesheet">
   </head>
   <body>
@@ -31,5 +40,19 @@
       To begin the development, run `yarn start`.
       To create a production bundle, use `yarn build`.
     -->
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(function(error) {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
