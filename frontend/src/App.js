@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import CGUPage from './components/CGUPage';
-import HomePage from './components/HomePage';
-import PaymentPage from './components/PaymentPage';
+import CGUPage from './pages/CGUPage';
+import HomePage from './pages/HomePage';
+import PaymentPage from './pages/PaymentPage';
 // Removed CSS import since we're using Tailwind
 
 // Import hydration components
