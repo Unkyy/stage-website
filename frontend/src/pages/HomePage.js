@@ -1,15 +1,19 @@
 import React, { Fragment } from 'react';
 import HeroBanner from 'src/components/herobanner'
-import HomePageComponent from 'src/components/HomePage'
 import TrailActivities from 'src/components/TrailActivities'
+import WeeklyPlanning from 'src/components/WeeklyPlanning'
+import StaffDescription from 'src/components/StaffDescription'
+import ParticipationRequirements from 'src/components/ParticipationRequirements'
 
 const HomePage = () => {
   return (
-    <Fragment>
+    <div className='scroll-container'>
       <HeroBanner/>
       <TrailActivities />
-      <HomePageComponent />
-    </Fragment>
+      <WeeklyPlanning />
+      <StaffDescription />
+      <ParticipationRequirements />
+    </div>
   );
 };
 

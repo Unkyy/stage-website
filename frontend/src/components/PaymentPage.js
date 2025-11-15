@@ -120,37 +120,37 @@ const PaymentPage = () => {
                 placeholder="1234 5678 9012 3456"
                 maxLength="19"
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
               />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex-1 text-left">
                 <label htmlFor="expiryDate" className="block mb-2 font-bold text-gray-700">Date d'expiration :</label>
-                <input
-                  type="text"
-                  id="expiryDate"
-                  value={expiryDate}
-                  onChange={(e) => setExpiryDate(e.target.value)}
-                  placeholder="MM/AA"
-                  maxLength="5"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
+              <input
+                type="text"
+                id="expiryDate"
+                value={expiryDate}
+                onChange={(e) => setExpiryDate(e.target.value)}
+                placeholder="MM/AA"
+                maxLength="5"
+                required
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
+              />
               </div>
 
               <div className="flex-1 text-left">
                 <label htmlFor="cvv" className="block mb-2 font-bold text-gray-700">CVV :</label>
-                <input
-                  type="text"
-                  id="cvv"
-                  value={cvv}
-                  onChange={(e) => setCvv(e.target.value)}
-                  placeholder="123"
-                  maxLength="3"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
+              <input
+                type="text"
+                id="cvv"
+                value={cvv}
+                onChange={(e) => setCvv(e.target.value)}
+                placeholder="123"
+                maxLength="3"
+                required
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
+              />
               </div>
             </div>
 
@@ -165,7 +165,7 @@ const PaymentPage = () => {
                 min="0"
                 step="0.01"
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
               />
             </div>
 
@@ -175,7 +175,7 @@ const PaymentPage = () => {
               </div>
             )}
 
-            <button type="submit" disabled={loading} className={`py-3 px-6 rounded-md font-medium text-white transition-colors ${loading ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}>
+            <button type="submit" disabled={loading} className={`py-3 px-6 rounded-md font-medium text-white transition-colors ${loading ? 'bg-gray-500 cursor-not-allowed' : 'bg-green-600 hover:bg-green-700'}`}>
               {loading ? 'Traitement...' : 'Payer'}
             </button>
           </form>
