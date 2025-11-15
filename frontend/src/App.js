@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-import CGUPage from './pages/CGUPage';
+import CGUPage from './components/CGUPage';
 import HomePage from './pages/HomePage';
-import PaymentPage from './pages/PaymentPage';
+import PaymentPage from './components/PaymentPage';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
             <Link to="/PaymentPage" className="mx-4 no-underline text-blue-600 font-bold hover:text-blue-800">card</Link>
             <Link to="/cgu" className="mx-4 no-underline text-blue-600 font-bold hover:text-blue-800">CGU</Link>
           </nav>
-          <main className="max-w-3xl mx-auto my-8 px-4 flex-grow">
+          <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/cgu" element={<CGUPage />} />
