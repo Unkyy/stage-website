@@ -12,7 +12,7 @@ const ParticipationRequirements = () => {
   ];
 
   return (
-    <section className="h-screen bg-white rounded-lg shadow-md p-6 my-8 h-screen max-w-6xl mx-auto px-4 py-8">
+    <section id="requirements" className="h-screen bg-white rounded-lg shadow-md p-6 my-8 h-screen max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">Conditions pour Participer</h2>
       <p className="text-gray-600 mb-4">
         Pour participer à nos activités, vous devez remplir les conditions suivantes :

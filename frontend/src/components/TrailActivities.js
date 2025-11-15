@@ -2,7 +2,7 @@ import React from 'react';
 
 const TrailActivities = () => {
   return (
-    <section className="h-screen flex items-center justify-center bg-gray-100">
+    <section className="h-screen flex items-center justify-center bg-gray-100" id="activities">
       <div className="max-w-6xl mx-auto px-5 py-5 font-sans w-full">
         <div className="bg-white p-6 rounded-lg shadow-sm">
           <h2 className="text-2xl text-green-900 mt-0 pb-3 border-b-2 border-green-500">Activités du Trail</h2>

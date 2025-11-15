@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroBanner = () => {
   return (
-    <section className="relative bg-gray-900 h-screen flex items-center justify-center">
+    <section className="relative bg-gray-900 h-screen flex items-center justify-center" id="hero">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
