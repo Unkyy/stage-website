@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CGUPage from './pages/CGUPage';
 import HomePage from './pages/HomePage';
 import PaymentPage from './pages/PaymentPage';
-// Removed CSS import since we're using Tailwind
-
-// Import hydration components
 
 function App() {
   return (

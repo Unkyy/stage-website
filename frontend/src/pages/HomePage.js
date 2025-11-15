@@ -1,8 +1,4 @@
 import React from 'react';
-import "tailwindcss";
-import "tw-animate-css";
- 
-
 const HomePage = () => {
   return (
     <div className="max-w-6xl mx-auto px-5 py-5 font-sans">
