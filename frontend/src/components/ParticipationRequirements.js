@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ParticipationRequirements = () => {
   const requirements = [
@@ -22,9 +23,11 @@ const ParticipationRequirements = () => {
         ))}
       </ul>
       <div className="mt-6">
-        <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded transition duration-300">
-          S'inscrire maintenant
-        </button>
+        <Link to="/payment">
+          <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded transition duration-300">
+            S'inscrire maintenant
+          </button>
+        </Link>
       </div>
     </section>
   );
