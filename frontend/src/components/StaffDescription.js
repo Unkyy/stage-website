@@ -2,13 +2,13 @@ import React from 'react';
 
 const StaffDescription = () => {
   return (
-    <section className="h-screen max-w-6xl mx-auto px-4 py-8" id="staff">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Notre Équipe</h1>
+    <section className="py-16 max-w-6xl mx-auto px-4 py-8" id="staff">
+      <h1 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">Notre Équipe</h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Team Member 1 */}
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             <h2 className="text-xl font-semibold mb-2 text-gray-800">Marie Dubois</h2>
             <p className="text-green-600 font-medium mb-3">Directrice Artistique</p>
             <p className="text-gray-600">
@@ -19,7 +19,7 @@ const StaffDescription = () => {
 
         {/* Team Member 2 */}
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             <h2 className="text-xl font-semibold mb-2 text-gray-800">Jean Martin</h2>
             <p className="text-green-600 font-medium mb-3">Chef de Projet</p>
             <p className="text-gray-600">
@@ -30,7 +30,7 @@ const StaffDescription = () => {
 
         {/* Team Member 3 */}
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             <h2 className="text-xl font-semibold mb-2 text-gray-800">Sophie Laurent</h2>
             <p className="text-green-600 font-medium mb-3">Développeuse Senior</p>
             <p className="text-gray-600">
@@ -41,7 +41,7 @@ const StaffDescription = () => {
       </div>
 
       <div className="mt-12 bg-gray-50 rounded-lg p-6">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800">Notre Philosophie</h2>
+        <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Notre Philosophie</h2>
         <p className="text-gray-600 mb-4">
           Notre équipe est composée de professionnels passionnés par leur travail et dédiés à l'excellence. Nous croyons fermement en la collaboration, l'innovation constante et le respect des valeurs qui nous guident dans chaque projet.
         </p>

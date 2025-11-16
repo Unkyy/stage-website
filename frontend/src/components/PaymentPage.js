@@ -105,9 +105,9 @@ const PaymentPage = () => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="py-12">
       <div className="max-w-2xl mx-auto px-4 py-8 w-full">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">Effectuer un paiement</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 md:mb-8 text-center">Effectuer un paiement</h1>
         <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <div className="text-left">

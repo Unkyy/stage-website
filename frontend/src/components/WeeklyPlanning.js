@@ -5,7 +5,7 @@ const WeeklyPlanning = () => {
   const weeklySchedule = [
     {
       day: 'Lundi',
-      date: '10 Nov',
+      date: '9 Mars',
       activities: [
         { time: '09:00 - 11:00', title: 'Ateliers Techniques', description: 'Techniques de base du trail running' },
         { time: '14:00 - 16:00', title: 'Randonnées Guides', description: 'Découverte du massif alpin' }
@@ -13,7 +13,7 @@ const WeeklyPlanning = () => {
     },
     {
       day: 'Mardi',
-      date: '11 Nov',
+      date: '10 Mars',
       activities: [
         { time: '10:00 - 12:00', title: 'Course de Trail', description: 'Course de 10 km en boucle' },
         { time: '15:00 - 17:00', title: 'Ateliers Techniques', description: 'Amélioration des techniques' }
@@ -21,7 +21,7 @@ const WeeklyPlanning = () => {
     },
     {
       day: 'Mercredi',
-      date: '12 Nov',
+      date: '11 Mars',
       activities: [
         { time: '09:00 - 11:00', title: 'Randonnées Guides', description: 'Pistes à travers les vallées' },
         { time: '14:00 - 16:00', title: 'Ateliers Techniques', description: 'Préparation physique' }
@@ -29,7 +29,7 @@ const WeeklyPlanning = () => {
     },
     {
       day: 'Jeudi',
-      date: '13 Nov',
+      date: '12 Mars',
       activities: [
         { time: '10:00 - 12:00', title: 'Course de Trail', description: 'Course de 10 km en boucle' },
         { time: '15:00 - 17:00', title: 'Randonnées Guides', description: 'Découverte des sommets' }
@@ -37,7 +37,7 @@ const WeeklyPlanning = () => {
     },
     {
       day: 'Vendredi',
-      date: '14 Nov',
+      date: '13 Mars',
       activities: [
         { time: '09:00 - 11:00', title: 'Ateliers Techniques', description: 'Préparation finale' },
         { time: '14:00 - 16:00', title: 'Randonnées Guides', description: 'Tour complet du massif' }
@@ -45,45 +45,38 @@ const WeeklyPlanning = () => {
     },
     {
       day: 'Samedi',
-      date: '15 Nov',
+      date: '14 Nov',
       activities: [
         { time: '08:00 - 10:00', title: 'Course de Trail', description: 'Course officielle' },
         { time: '15:00 - 17:00', title: 'Cérémonie de clôture', description: 'Remise des prix et récompenses' }
-      ]
-    },
-    {
-      day: 'Dimanche',
-      date: '16 Nov',
-      activities: [
-        { time: '10:00 - 12:00', title: 'Randonnées Libres', description: 'Exploration libre du massif' }
       ]
     }
   ];
 
   return (
-    <section id="planning" className="h-screen  flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl w-full">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-green-900 mb-2">Planning Hebdomadaire</h2>
-          <p className="text-gray-600">Découvrez toutes les activités prévues pour la semaine de l'événement</p>
+    <section id="planning" className="py-12 bg-gray-50">
+      <div className="max-w-6xl w-full mx-auto px-4 py-8">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-green-900 mb-2 sm:text-3xl">Planning Hebdomadaire</h2>
+          <p className="text-gray-600 text-sm sm:text-base">Découvrez toutes les activités prévues pour la semaine de l'événement</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6">
           {weeklySchedule.map((day, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
               <div className="bg-green-800 text-white py-3 px-4 text-center">
                 <h3 className="text-lg font-semibold">{day.day}</h3>
                 <p className="text-sm opacity-90">{day.date}</p>
               </div>
-              <div className="p-4">
-                <ul className="space-y-3">
+              <div className="p-3 sm:p-4">
+                <ul className="space-y-2 sm:space-y-3">
                   {day.activities.map((activity, activityIndex) => (
-                    <li key={activityIndex} className="border-l-4 border-green-500 pl-3 py-2">
+                    <li key={activityIndex} className="border-l-4 border-green-500 pl-2 sm:pl-3 py-2">
                       <div className="flex justify-between items-start">
-                        <span className="font-medium text-gray-900">{activity.time}</span>
+                        <span className="font-medium text-gray-900 text-sm sm:text-base">{activity.time}</span>
                       </div>
-                      <h4 className="font-semibold text-green-700 mt-1">{activity.title}</h4>
-                      <p className="text-sm text-gray-600 mt-1">{activity.description}</p>
+                      <h4 className="font-semibold text-green-700 mt-1 text-base sm:text-lg">{activity.title}</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 mt-1">{activity.description}</p>
                     </li>
                   ))}
                 </ul>

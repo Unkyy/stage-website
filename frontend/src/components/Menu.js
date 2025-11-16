@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { a } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,15 +18,15 @@ const Menu = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
-          <a href="/" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Accueil</a>
-          <a href="#activities" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Activités</a>
-          <a href="#planning" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Planning</a>
-          <a href="#staff" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Équipe</a>
-          <a href="#requirements" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Conditions</a>
-          <a href="#gallery" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Galerie</a>
-          <a href="#contact" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Contact</a>
-          <a href="/cgu" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">CGU</a>
-          <a href="/payment" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Paiement</a>
+          <Link to="/" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Accueil</Link>
+          <Link to="#activities" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Activités</Link>
+          <Link to="#planning" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Planning</Link>
+          <Link to="#staff" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Équipe</Link>
+          <Link to="#requirements" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Conditions</Link>
+          <Link to="#gallery" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Galerie</Link>
+          <Link to="#contact" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Contact</Link>
+          <Link to="/cgu" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">CGU</Link>
+          <Link to="/payment" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors">Paiement</Link>
         </div>
         
         {/* Mobile menu button */}
@@ -48,16 +48,16 @@ const Menu = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden mt-4 pb-4">
-          <div className="flex flex-col space-y-3">
-            <a href="/" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">Accueil</a>
-            <a href="#activities" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">Activités</a>
-            <a href="#planning" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">Planning</a>
-            <a href="#staff" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">Équipe</a>
-            <a href="#requirements" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">Conditions</a>
-            <a href="#gallery" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">Galerie</a>
-            <a href="#contact" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">Contact</a>
-            <a href="/cgu" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">CGU</a>
-            <a href="/payment" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-2 px-4 rounded hover:bg-gray-100">Paiement</a>
+          <div className="flex flex-col space-y-2">
+            <Link to="/" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">Accueil</Link>
+            <Link to="#activities" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">Activités</Link>
+            <Link to="#planning" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">Planning</Link>
+            <Link to="#staff" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">Équipe</Link>
+            <Link to="#requirements" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">Conditions</Link>
+            <Link to="#gallery" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">Galerie</Link>
+            <Link to="#contact" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">Contact</Link>
+            <Link to="/cgu" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">CGU</Link>
+            <Link to="/payment" className="no-underline text-green-600 font-bold hover:text-green-800 transition-colors py-3 px-4 rounded hover:bg-gray-100">Paiement</Link>
           </div>
         </div>
       )}
