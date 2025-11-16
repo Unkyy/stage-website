@@ -4,19 +4,35 @@ const TrailActivities = () => {
   return (
     <section className="py-16 bg-gray-100" id="activities">
       <div className="max-w-6xl mx-auto px-4 py-8 font-sans">
-        <div className="bg-white p-6 rounded-lg shadow-sm p">
+        <div className="bg-white p-6 rounded-lg shadow-sm">
           <h2 className="text-2xl text-green-900 mt-0 pb-3 border-b-2 border-green-500">Stage Trail</h2>
-          <div 
-            className="relative bg-cover bg-center"
-            style={{ backgroundImage: "url('/hero-banner.jpg')" }}
-          ></div>
-          <p className="mb-6">
-            Je suis très heureux de t'annoncer ce stage trail dans un endroit qui m'est cher, un lieu propice au calme, à la respiration et au plaisir de courir en pleine nature.
-            L'idée : vivre une semaine simple, active et ressourçante, entre partage, progression et contemplation.
-            On y court, on apprend, on récupère... et on se laisse porter par le charme du Verdon.
-          </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Two-column layout with background image and text */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 ">
+            {/* Background image column */}
+            <div 
+              className="bg-cover bg-center h-64 md:h-80 rounded-lg overflow-hidden"
+              style={{ backgroundImage: "url('/stage.jpg')" }}
+            >
+              {/* Empty div to maintain aspect ratio */}
+            </div>
+            
+            {/* Text content column */}
+            <div className="lg:col-span-2">
+              <p className="text-gray-700">
+                Je suis très heureux de t'annoncer ce stage trail dans un endroit qui m'est cher, un lieu propice au calme, à la respiration et au plaisir de courir en pleine nature.
+              </p>
+              <p className="text-gray-700">
+                L'idée : vivre une semaine simple, active et ressourçante, entre partage, progression et contemplation.
+              </p>
+              <p className="text-gray-700">
+                On y court, on apprend, on récupère... et on se laisse porter par le charme du Verdon.
+              </p>
+            </div>
+          </div>
+          
+          {/* Activities grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             <div className="border border-gray-200 rounded-lg p-4">
               <h3 className="text-xl font-semibold text-green-700 mb-2">Course de Trail</h3>
               <p className="text-gray-700">

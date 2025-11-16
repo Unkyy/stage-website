@@ -9,6 +9,9 @@ const StaffDescription = () => {
         {/* Team Member 1 */}
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="p-4 sm:p-6">
+            <div className="flex justify-center mb-4">
+              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+            </div>
             <h2 className="text-xl font-semibold mb-2 text-gray-800">Marie Dubois</h2>
             <p className="text-green-600 font-medium mb-3">Directrice Artistique</p>
             <p className="text-gray-600">
@@ -20,6 +23,9 @@ const StaffDescription = () => {
         {/* Team Member 2 */}
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="p-4 sm:p-6">
+            <div className="flex justify-center mb-4">
+              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+            </div>
             <h2 className="text-xl font-semibold mb-2 text-gray-800">Jean Martin</h2>
             <p className="text-green-600 font-medium mb-3">Chef de Projet</p>
             <p className="text-gray-600">
@@ -31,6 +37,9 @@ const StaffDescription = () => {
         {/* Team Member 3 */}
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="p-4 sm:p-6">
+            <div className="flex justify-center mb-4">
+              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+            </div>
             <h2 className="text-xl font-semibold mb-2 text-gray-800">Sophie Laurent</h2>
             <p className="text-green-600 font-medium mb-3">Développeuse Senior</p>
             <p className="text-gray-600">
